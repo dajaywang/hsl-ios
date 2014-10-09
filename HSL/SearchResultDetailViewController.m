@@ -124,7 +124,8 @@
     static NSString *CellIdentifier = @"DetailCell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
+    if (cell == nil)
+    {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
@@ -132,7 +133,8 @@
     
     Leg *oneLeg = [oneRouting.LegArray objectAtIndex:indexPath.section];
     
-    if ([oneLeg.locArrayWithName count] > 0) {
+    if ([oneLeg.locArrayWithName count] > 0)
+    {
         Loc *oneLoc = [oneLeg.locArrayWithName objectAtIndex:indexPath.row];
         
         [cell addSubview:[self labelForOneLegOfRouting:[NSString stringWithFormat:@"%@    %@(%@)",[Loc getTimeFromDepOrArrTime:oneLoc.arrTime]==NULL?@"":[Loc getTimeFromDepOrArrTime:oneLoc.arrTime], oneLoc.name==NULL?@"":oneLoc.name, oneLoc.shortCode==NULL?@"":oneLoc.shortCode]  withFrame:CGRectMake(self.tableView.frame.size.width*0.1, 0, self.tableView.frame.size.width, self.tableView.rowHeight*0.8) withFont:12 ]];
@@ -220,14 +222,16 @@
     {
         image.image = [UIImage imageNamed:@"bus.gif"];
     }
-    else if ([type isEqualToString:@"2"]) {
+    else if ([type isEqualToString:@"2"])
+    {
         image.image = [UIImage imageNamed:@"tram.gif"];
     }
     else if ([type isEqualToString:@"6"])
     {
         image.image = [UIImage imageNamed:@"metro.gif"];
     }
-    else if ([type isEqualToString:@"12"]) {
+    else if ([type isEqualToString:@"12"])
+    {
         image.image = [UIImage imageNamed:@"train.gif"];
     }
    
