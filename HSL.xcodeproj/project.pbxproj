@@ -262,6 +262,7 @@
 				637B5948150A251D00E57E7E /* Sources */,
 				637B5949150A251D00E57E7E /* Frameworks */,
 				637B594A150A251D00E57E7E /* Resources */,
+				6366C1B719E8393B0098CF55 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -316,6 +317,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6366C1B719E8393B0098CF55 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Auto Increment Version Script\nbuildPlist=${INFOPLIST_FILE}\nCFBuildDate=$(date)\n/usr/libexec/PlistBuddy -c \"Set :CFBuildDate $CFBuildDate\" $buildPlist\nREV=`git rev-parse --short=6 HEAD`\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $REV\" $buildPlist";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		637B5948150A251D00E57E7E /* Sources */ = {

@@ -12,8 +12,6 @@
 	<array>
 		<string>hsl_logo.png</string>
 	</array>
-	<key>LSApplicationCategoryType</key>
-	<string></string>
 	<key>CFBundleIdentifier</key>
 	<string>UH.${PRODUCT_NAME:rfc1034identifier}</string>
 	<key>CFBundleInfoDictionaryVersion</key>
@@ -27,7 +25,9 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>1.0</string>
+	<string>e5ffbb</string>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UIMainStoryboardFile</key>
